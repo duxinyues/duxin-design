@@ -1,13 +1,21 @@
 {
   "name": "duxin-design",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.9",
 	"description": "一个简单的组件库",
-  "main": "./duxin-design/duxin-design.js",
+  "main": "lib/index.js",
   "keywords": ["react","duxin-design"],
-  "author": "",
+  "author": "duxinyues",
 	"license": "ISC",
   
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duxinyues/duxin-design"
+  },
+  "bugs": {
+    "url": "https://github.com/duxinyues/duxin-design/issues",
+    "email": "yongyuan253015@gmail.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
