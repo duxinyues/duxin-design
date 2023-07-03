@@ -1,0 +1,38 @@
+{
+  "name": "duxin-design",
+  "private": false,
+  "version": "0.0.1",
+	"description": "一个简单的组件库",
+  "main": "./duxin-design/duxin-design.js",
+  "keywords": ["react","duxin-design"],
+  "author": "",
+	"license": "ISC",
+  
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "antd": "^5.6.4",
+    "dayjs": "^1.11.9",
+    "esno": "^0.16.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.1.6",
+    "vite-plugin-imp": "^2.4.0",
+    "vite-plugin-style-import": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.1",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "vite": "^4.3.9"
+  }
+}
