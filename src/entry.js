@@ -1,4 +1,4 @@
-import DXButton from "./Button/index";
+import DXButton from "./components/Button";
 //   import './index.css'
 
 export { DXButton };

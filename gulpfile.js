@@ -17,7 +17,7 @@ const paths = {
   less: 'src/**/!(*.module).less',
   fullLess: `${folderName}/styles/index.less`,
   types: 'types/**/!(*.test).+(tsx|js|ts)',
-  changelog: 'CHANGELOG.md',
+  // changelog: 'CHANGELOG.md',
   changelogDest: 'docs/',
   assets: 'src/assets/**/*',
   assetsDest: `${folderName}/assets`
@@ -32,7 +32,8 @@ const paths = {
 const createLessFile = cb => {
   const cwd = process.cwd()
   const componentsPath = path.resolve(cwd, 'src')
-  let fullLess = '@import "antd/lib/style/core/index.less";\n'
+  // let fullLess = '@import "antd/lib/style/core/index.less";\n'
+  let fullLess = ''
   let compatComponentLess = ''
 
   fs.ensureDirSync(paths.buildStyles)
@@ -48,8 +49,8 @@ const createLessFile = cb => {
       }
     })
     // 不用modifyVars的方式，直接引入样式变量文件覆盖主题，这样可以给外面用，外面可以再覆盖一层
-    fullLess += `@import "../styles/theme.less";\n`
-    compatComponentLess += `@import "../styles/theme.less";\n`
+    // fullLess += `@import "../styles/theme.less";\n`
+    // compatComponentLess += `@import "../styles/theme.less";\n`
     fs.writeFileSync(path.resolve(cwd, paths.fullLess), fullLess)
 
     cb()
@@ -61,7 +62,7 @@ gulp.task('js', () => {
     ? {
         overrides: [
           {
-            plugins: ['@babel/plugin-transform-modules-commonjs']
+            // plugins: ['@babel/plugin-transform-modules-commonjs']
           }
         ]
       }
@@ -85,9 +86,9 @@ gulp.task('handleTs', () => {
   return pipeToDest(gulp.src(paths.types))
 })
 
-gulp.task('copyChangelog', () => {
-  return gulp.src(paths.changelog).pipe(gulp.dest(paths.changelogDest))
-})
+// gulp.task('copyChangelog', () => {
+//   return gulp.src(paths.changelog).pipe(gulp.dest(paths.changelogDest))
+// })
 
 gulp.task('copyLess', () => {
   return pipeToDest(gulp.src(paths.less))
@@ -101,6 +102,6 @@ module.exports = {
   build: gulp.series(
     'copyLess',
     createLessFile,
-    gulp.parallel('js', 'handleTs', 'fullLess', 'copyChangelog', 'copyAssets')
+    gulp.parallel('js', 'handleTs', 'fullLess', 'copyAssets')
   )
 }
