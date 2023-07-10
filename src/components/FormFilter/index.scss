@@ -1,0 +1,62 @@
+.toolbarSearch {
+    margin-bottom: 12px;
+
+    :global {
+        .ant-form-item-control {
+            line-height: 32px;
+        }
+    }
+
+    .extAction {
+        button {
+            margin-left: 12px;
+        }
+    }
+}
+
+.formItemBottom {
+    :global {
+        .ant-form-item {
+            margin-bottom: 0;
+        }
+    }
+}
+.tabsCover {
+    :global {
+      .ant-tabs-bar {
+        margin: 0;
+        .ant-tabs-tab {
+          padding: 8px 0;
+          margin-right: 32px;
+        }
+        .ant-tabs-tab:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .levelSearch {
+    padding: 20px 24px 12px;
+    background: #fff;
+    margin-top: 12px;
+    display: block;
+    :global {
+      .ant-form-item-control {
+        line-height: 40px;
+      }
+      .ant-form-item {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .hide {
+    display: none;
+    opacity: 0;
+  }
+  .search {
+    cursor: pointer;
+    margin-left: 1px;
+    :hover {
+      color: $colorblue !important;
+    }
+  }

@@ -1,27 +1,39 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { Form } from "antd"
 import './App.css'
-import Button from './components/Button'
+import Button from './components/Button';
+import DXFormFilter from "./components/FormFilter"
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [count, setCount] = useState(0);
+  const [form] = Form.useForm();
+  const formItemList = [
+    {
+      position: "tab",
+      key:"aa",
+      placeholder:"今天"
+    },
+    {
+      position: "tab",
+      key:"aad",
+      placeholder:"明天"
+    },
+    {
+      position: "show"
+    },
+    {
+      position: "hidden"
+    }
+  ]
   return (
     <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <Button />
-    </>
+    <DXFormFilter 
+      toggle= { true}
+      formItemList={formItemList}
+    />
+    <Button />
+    < />
   )
 }
 
