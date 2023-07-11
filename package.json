@@ -1,7 +1,7 @@
 {
   "name": "duxin-design",
   "private": false,
-  "version": "0.0.13",
+  "version": "0.0.15",
   "description": "一个简单的组件库",
   "main": "lib/entry.js",
   "module": "esm/entry.js",
@@ -29,13 +29,13 @@
     "build:cjs": "gulp build --cjs",
     "build": "npm-run-all clean:* --parallel build:types --parallel build:*",
     "build:types": "tsc -d --emitDeclarationOnly  --declarationDir ./types",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "antd": "^5.6.4",
     "dayjs": "^1.11.9",
     "esno": "^0.16.3",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass-loader": "^13.3.2",
@@ -70,6 +70,7 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-less": "^5.0.0",
+    "gulp-scss": "^1.4.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^5.0.1",
     "sass": "^1.63.6",
