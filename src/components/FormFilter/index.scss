@@ -56,22 +56,27 @@
  }
 
  .toolbarSearch {
-  //  margin-bottom: 12px;
+   //  margin-bottom: 12px;
 
-   .ant-form-item{
-    margin-bottom: 0px;
+   .ant-form-item {
+     margin-bottom: 0px;
    }
+
    :global {
      .ant-form-item-control {
        line-height: 32px;
      }
-    
+
      // .ant-tabs-nav .ant-tabs-tab {
      //   padding: 6px 16px;
      // }
      // .ant-tabs-nav .ant-tabs-tab:hover {
      //   color: black;
      // }
+   }
+
+   .ant-picker-input {
+     padding: 0 10px;
    }
 
    .extAction {

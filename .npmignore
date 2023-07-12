@@ -12,3 +12,5 @@ package.json
 tsconfig.json
 tsconfig.node.json
 vite.config.ts
+main.tsx
+App.tsx

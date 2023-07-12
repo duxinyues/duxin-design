@@ -117,12 +117,12 @@ export default function FormFilter(props: Props) {
             placeholder={
               item.rangePickerPlaceholder ? item.rangePickerPlaceholder : ['开始日期', '结束日期']
             }
-            ranges={{
-              今日: [moment().startOf('day'), moment().endOf('day')],
-              本周: [moment().startOf('week'), moment().endOf('week')],
-              本月: [moment().startOf('month'), moment().endOf('month')],
-              清空: [],
-            }}
+            // dateRender={{
+            //   今日: [moment().startOf('day'), moment().endOf('day')],
+            //   本周: [moment().startOf('week'), moment().endOf('week')],
+            //   本月: [moment().startOf('month'), moment().endOf('month')],
+            //   清空: [],
+            // }}
             width={item.width}
             showTime={!!item.showTime}
             onKeyDown={handleQueryFormKeyDown}

@@ -1,12 +1,11 @@
 import { useState, Fragment } from 'react';
-import { Form } from "antd"
+import { Form, Select } from "antd"
 import './App.css'
 import Button from './components/Button';
 import DXFormFilter from "./components/FormFilter"
 
 
 function App() {
-  const [count, setCount] = useState(0);
   const [form] = Form.useForm();
   const formItemList = [
     {
@@ -24,16 +23,48 @@ function App() {
       placeholder: "姓名",
       type: "input",
       key: "username",
-      initialValue:"90",
-      rules: [{ required: true,message: '姓名为必填项' }],
+      initialValue: "duxin",
+      // rules: [{ required: true,message: '姓名为必填项' }],
+    },
+    {
+      position: "show",
+      placeholder: "数量",
+      type: "input",
+      key: "number",
     },
     {
       position: "hidden",
       placeholder: "年龄",
       type: "input",
       key: "age",
-      initialValue:"90",
+      initialValue: "90",
+
       // rules: [{ required: true, message: '年龄为必填项'}],
+    },
+    {
+      type: "datePicker",
+      position: "show",
+      placeholder: "日期",
+      key: "date",
+      props: {
+        width: "300px"
+      }
+    },
+    {
+      type: "rangePicker",
+      position: "hidden",
+      key: "rangedates",
+      placeholder: "时间段",
+    },
+    {
+      position: "hidden",
+      placeholder: "select",
+      key: "rrr",
+      type: 'component',
+      component: (<Select>
+        <Select.Option value={97}>97</Select.Option>
+        <Select.Option value={98}>98</Select.Option>
+      </Select>)
     }
   ]
   const handleFinish = () => {
