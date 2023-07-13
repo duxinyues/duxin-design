@@ -1,8 +1,7 @@
 import { useState, Fragment } from 'react';
 import { Form, Select } from "antd"
 import './App.css'
-import Button from './components/Button';
-import DXFormFilter from "./components/FormFilter"
+import { DXFormFilter, DXSelect } from './entry';
 
 
 function App() {
@@ -75,9 +74,27 @@ function App() {
       console.log("err：", err)
     })
   }
-  return <DXFormFilter
-    formItemList={formItemList}
-    form={form} handleFinish={() => handleFinish()} />
+  const defaultConfig = {
+    options: [
+      { itemKey: "123", itemValue: "test" },
+      { itemKey: "124", itemValue: "test4" }
+    ],
+    styles: {
+      width: "100px"
+    },
+    otherProps: {
+      allowClear: true,
+      onChange: (value: string, option: any,) => {
+        console.log("value", value, option)
+      }
+    }
+  }
+  return <div>
+    <DXFormFilter
+      formItemList={formItemList}
+      form={form} handleFinish={() => handleFinish()} />
+    <DXSelect config={defaultConfig} />
+  </div>
 }
 
 export default App
