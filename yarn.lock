@@ -2790,6 +2790,11 @@
     "snake-case" "^3.0.4"
     "tslib" "^2.0.3"
 
+"china-division@^2.6.1":
+  "integrity" "sha512-Iq9YCEWqPcSrD7/7McKpN9QHNbn2iibLmg1NEAxLacijqJzLbytr0sLuKJNY4Exd0LA77N18Pwr9JGgU1p5S6w=="
+  "resolved" "https://registry.npmjs.org/china-division/-/china-division-2.6.1.tgz"
+  "version" "2.6.1"
+
 "chokidar@^2.0.0":
   "integrity" "sha1-gEs6e2qZNYw8XGHnHYco8EHP+Rc="
   "resolved" "http://sinopia.yunrong.cn:4873/chokidar/-/chokidar-2.1.8.tgz"
