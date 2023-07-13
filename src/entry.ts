@@ -1,4 +1,4 @@
 import DXButton from "./components/Button/index";
-import DXFormFilter from "./components/FormFilter"
+import DXFormFilter from "./components/DXFormFilter"
 
 export { DXButton,DXFormFilter };

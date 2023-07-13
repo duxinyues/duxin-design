@@ -2,7 +2,7 @@ import { useState, Fragment } from 'react';
 import { Form, Select } from "antd"
 import './App.css'
 import Button from './components/Button';
-import DXFormFilter from "./components/FormFilter"
+import DXFormFilter from "./components/DXFormFilter"
 
 
 function App() {
