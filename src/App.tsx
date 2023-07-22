@@ -77,7 +77,9 @@ function App() {
   const defaultConfig = {
     options: [
       { itemKey: "123", itemValue: "test" },
-      { itemKey: "124", itemValue: "test4" }
+      { itemKey: "124", itemValue: "test4" },
+      { itemKey: "12", itemValue: "test43" },
+      { itemKey: "122", itemValue: "test23" }
     ],
     styles: {
       width: "100px"
@@ -93,7 +95,7 @@ function App() {
     <DXFormFilter
       formItemList={formItemList}
       form={form} handleFinish={() => handleFinish()} />
-    <DXSelect config={defaultConfig} />
+    <DXSelect config={defaultConfig} defaultValue="12" filterProps={["123","12"]}/>
   </div>
 }
 
