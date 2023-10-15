@@ -10,8 +10,6 @@ interface ConfigProps {
     options: optionItem[],// 下拉框选项
     styles?: object, // 宽度
     otherProps?: object, // 其他属性
-
-
 }
 interface Props {
     config: ConfigProps,
